@@ -1,4 +1,5 @@
-from dice import d
+import making
+import rmaking
 import os
 
 
@@ -8,12 +9,17 @@ def main():
     if char == 1:
         print("Let's get started making your character!")
         os.system('clear')
-        print("Now you have to choose a race")
+        char = making.Maker()
+        char.go()
+        print(char)
     else:
         print("Here is your random character!")
         os.system('clear')
         print("Here is your character!")
-
+        print("\n")
+        charr = rmaking.Maker()
+        charr.go()
+        print(charr)
 
 def startchoice():
     print("1. Build Own.")
